@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Loan Buddy ‑ Profile</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <img src="assets/icons/profile.png" alt="Profile Logo" class="logo">
+    <h1>Loan Buddy</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="profile.html" class="active">Profile</a>
+      <a href="emi.html">EMI</a>
+    </nav>
+  </header>
+  <main class="container">
+    <form id="profileForm">
+      <input type="number" id="salary" placeholder="Monthly Salary" required>
+      <input type="number" id="loanAmount" placeholder="Loan Amount Needed" required>
+      <input type="number" id="tenure" placeholder="Tenure (Years)" required>
+      <button type="submit">Show Banks</button>
+    </form>
+    <section id="bankOptions" class="hidden">
+      <div id="banksList"></div>
+    </section>
+    <section id="bankDetails" class="hidden">
+      <input type="text" id="bankName" placeholder="Bank Name" required>
+      <input type="text" id="accountNumber" placeholder="Account Number" required>
+      <input type="text" id="ifsc" placeholder="IFSC Code" required>
+      <input type="text" id="branch" placeholder="Branch Name" required>
+      <input type="text" id="accountHolder" placeholder="Account Holder Name" required>
+      <button id="submitBank">Next</button>
+    </section>
+    <section id="docUpload" class="hidden">
+      <input type="file" id="aadhaar" accept="image/*" required>
+      <input type="file" id="panFront" accept="image/*" required>
+      <input type="file" id="panBack" accept="image/*" required>
+      <input type="file" id="bankStmt" accept="application/pdf,image/*" required>
+      <button id="submitDocs">Submit</button>
+    </section>
+    <p id="thankyouMsg" class="hidden">
+      Thanks for applying for <strong id="appliedLoanType"></strong>! Our team will contact you within 40 minutes.
+    </p>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
